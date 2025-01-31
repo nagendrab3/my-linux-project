@@ -1,0 +1,1277 @@
+
+What is an operating system?
+
+==>An OS is the software that directly manages a system’s hardware and resources, like the CPU, memory, and storage. 
+==>The OS sits between applications and hardware and makes the connections between all your software and the physical resources that do the work.
+
+Types of Operating Systems:
+
+Operating systems can be categorized into several types based on their functionality and design.
+
+Batch Operating Systems: 
+==>Execute batches of jobs without user interaction.
+
+Time-sharing or Multitasking Operating Systems: 
+==>Allow multiple users to share system resources simultaneously.
+
+Distributed Operating Systems:
+==>Manage a group of distinct computers and make them appear to users as a single coherent system.
+
+Network Operating Systems: 
+==>Provide services to computers connected over a network, allowing for resource sharing.
+
+Real-time Operating Systems: 
+==>Ensure timely processing of inputs and outputs, suitable for critical applications like robotics and embedded systems.
+
+Mobile Operating Systems: 
+==>Designed specifically for mobile devices, these include operating systems like Android and iOS.
+
+Examples of Popular Operating Systems
+
+Desktop : Microsoft Windows,MacOS,Linux
+
+Mobile: Android, ios
+
+Network: Windowsserver, Unix
+
+RealTime: Vxworks, eCos
+
+
+
+Linux
+
+Open Source: 
+==>Linux is an open-source operating system, meaning its source code is freely available for anyone to view, modify, and distribute.
+
+Unix-like: 
+==>It is similar to Unix, which provides a familiar environment for users transitioning from other Unix-based systems.
+
+Multi-User Capability:
+==>Linux supports multiple users simultaneously, allowing them to access system resources like memory and applications without interference.
+
+Multi-tasking:
+==>It enables the execution of multiple processes at the same time, enhancing productivity and efficiency.
+
+Portability:
+==>Linux can run on various hardware platforms, making it adaptable for desktops, servers, mainframes, and embedded devices.
+
+Hierarchical File System:
+==>It organizes files in a structured directory hierarchy, facilitating easy navigation and management of files.
+
+Security Features:
+==>Linux incorporates robust security measures, including user authentication, authorization controls, and data encryption.
+
+Shell Interface:
+==>The shell serves as the command-line interface for users to interact with the operating system by executing commands and scripts.
+
+Community Support:
+==>A vibrant community contributes to its development and provides extensive documentation, tutorials, and forums for user support.
+
+Wide Range of Distributions: 
+==>There are numerous Linux distributions (distros), such as Ubuntu, Fedora, and CentOS, each tailored for specific use cases or user preferences.
+
+
+
+
+Key Components of the Linux Operating System:
+
+Kernel:
+==>The core part of the Linux OS, responsible for managing hardware resources and system calls.
+==>It operates in kernel mode, which allows it full access to all system resources.
+==>Manages tasks such as memory management, process scheduling, device control, and system calls.
+==>Supports various architectures and can be customized for specific needs.
+
+System Libraries:
+==>Special functions or programs that provide an interface for application programs to access kernel features.
+==>Implement most functionalities of the operating system without requiring direct access to kernel code.
+==>Facilitate easier application development by providing pre-written code for common tasks.
+
+Shell:
+==>The command-line interface that allows users to interact with the kernel by entering commands.
+==>Acts as a bridge between the user and the kernel, interpreting user commands and executing them.
+==>Can be either a command-line shell (like Bash) or a graphical user interface (GUI).
+
+System Utilities:
+==>Essential tools and programs that perform specific tasks related to system management and configuration.
+==>Include utilities for file management, process control, software installation, and network configuration.
+==>Help users perform administrative tasks efficiently.
+
+Hardware Layer:
+==>Comprises all physical components of the computer such as CPU, RAM, hard drives and peripheral devices.
+==>The kernel interacts directly with this layer to manage resources and ensure smooth operation.
+
+Terminal:
+==>A terminal, also known as a command-line interface (CLI), shell or console is a text-based interface for interacting with a computer operating system. 
+==>It provides a way for users to enter commands and receive text-based output.
+
+Comman: 
+==>A command is a specific instruction or request given to a computer operating system or shell. 
+==>It tells the computer to perform a particular action or task.
+
+
+
+                                 ****************************
+                                 *   SYSTEM COMMANDS        *
+                                 ****************************
+
+To login as root user : sudo -i
+
+[ec2-user@ip-172-31-31-230 ~]$ sudo -i
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+
+
+uname : used to get type of OS
+
+[root@ip-172-31-31-230 ~]# uname
+Linux
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+
+=====================================================================================================================================================
+
+uname -r : used to get kernel version of our OS
+
+[root@ip-172-31-31-230 ~]# uname -r 
+6.1.124-134.200.amzn2023.x86_64
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ^C
+[root@ip-172-31-31-230 ~]#
+
+=======================================================================================================================================================
+
+uname -a : used to get full info about OS
+
+[root@ip-172-31-31-230 ~]# uname -a
+Linux ip-172-31-31-230.ec2.internal 6.1.124-134.200.amzn2023.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Jan 14 08:15:53 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+
+========================================================================================================================================================
+
+clear: this command is used to clear the clear (or) you can use ctrl + l as a short cut
+
+========================================================================================================================================================
+
+uptime : used to get since how long our system is in running state
+
+[root@ip-172-31-31-230 ~]# uptime
+ 05:40:53 up 4 min,  2 users,  load average: 0.02, 0.09, 0.05
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+
+=======================================================================================================================================================
+uptime -p : this will give only time
+
+[root@ip-172-31-31-230 ~]# uptime -p
+up 5 minutes
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+=======================================================================================================================================================
+
+hostname: used to get private dns name of our system
+
+[root@ip-172-31-31-230 ~]# hostname
+ip-172-31-31-230.ec2.internal
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+
+=======================================================================================================================================================
+
+hostname -i : used to get private ip of our system
+
+[root@ip-172-31-31-230 ~]# hostname -i
+172.31.31.230
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+=======================================================================================================================================================
+
+hostnamectl set-hostname “Nagendra” : used to change hostname
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# hostnamectl set-hostname Nagendra
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# hostname
+Nagendra
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+=========================================================================================================================================================
+
+ip addr : used to get private IP
+
+[root@ip-172-31-31-230 ~]# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enX0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP group default qlen 1000
+    link/ether 0a:ff:c5:fd:e2:05 brd ff:ff:ff:ff:ff:ff
+    altname eni-0b5c0702c7bb214ae
+    altname device-number-0.0
+    inet 172.31.31.230/20 metric 512 brd 172.31.31.255 scope global dynamic enX0
+       valid_lft 3179sec preferred_lft 3179sec
+    inet6 fe80::8ff:c5ff:fefd:e205/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+
+ip route : used to get private IP
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ip route
+default via 172.31.16.1 dev enX0 proto dhcp src 172.31.31.230 metric 512 
+172.31.0.2 via 172.31.16.1 dev enX0 proto dhcp src 172.31.31.230 metric 512 
+172.31.16.0/20 dev enX0 proto kernel scope link src 172.31.31.230 metric 512 
+172.31.16.1 dev enX0 proto dhcp scope link src 172.31.31.230 metric 512 
+[root@ip-172-31-31-230 ~]#
+
+=========================================================================================================================================================
+
+
+ifconfig : used to get private IP
+
+[root@ip-172-31-31-230 ~]# ifconfig
+enX0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.31.230  netmask 255.255.240.0  broadcast 172.31.31.255
+        inet6 fe80::8ff:c5ff:fefd:e205  prefixlen 64  scopeid 0x20<link>
+        ether 0a:ff:c5:fd:e2:05  txqueuelen 1000  (Ethernet)
+        RX packets 24295  bytes 33506470 (31.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3751  bytes 300243 (293.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 12  bytes 1020 (1020.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12  bytes 1020 (1020.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+
+date : to get todays date
+[root@ip-172-31-31-230 ~]# date
+Mon Jan 27 05:45:16 UTC 2025
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+timedatectl : used to get timezones
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# timedatectl
+               Local time: Mon 2025-01-27 05:46:13 UTC
+           Universal time: Mon 2025-01-27 05:46:13 UTC
+                 RTC time: Mon 2025-01-27 05:46:12
+                Time zone: n/a (UTC, +0000)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+
+timedatectl set-timezone Asia/Kolkata : used to change Timezone to IST
+
+[root@ip-172-31-31-230 ~]# timedatectl set-timezone Asia/Kolkata
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# date
+Mon Jan 27 11:17:11 IST 2025
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+who : used to see how many users have been loggin into your system
+
+[root@ip-172-31-31-230 ~]# who
+ec2-user pts/0        2025-01-27 11:06 (18.206.107.28)
+ec2-user pts/1        2025-01-27 11:07 (18.206.107.28)
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+
+whoami : used to see the current user.
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# whoami
+root
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ^C
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+
+ps : used to see the running processors in system
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ps
+    PID TTY          TIME CMD
+   2687 pts/1    00:00:00 sudo
+   2688 pts/1    00:00:00 bash
+   3206 pts/1    00:00:00 ps
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+kill -9 PID : used to kill a processor
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# kill -9 3206
+-bash: kill: (3206) - No such process
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+
+date : Shows system date and timestamp
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# date
+Mon Jan 27 11:19:40 IST 2025
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+=========================================================================================================================================================
+
+date +”%d” : Prints day of the month (01-31)
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# date +”%d”
+”27”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+date +”%m” : Prints the month of the year 01-12
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# date +”%m”
+”01”
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+
+date +”%y” : Prints only the last two digits of Year
+
+[root@ip-172-31-31-230 ~]# date +”%y”
+”25”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+date +”%H” : Prints the hour 00-23
+
+[root@ip-172-31-31-230 ~]# date +”%H”
+”11”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+date +”%M” : Prints the Minute of the hour 00-59
+
+[root@ip-172-31-31-230 ~]# date +”%M”
+”22”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ^C
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+date +”%S” : Prints the current seconds count in the minute (00-60)
+
+[root@ip-172-31-31-230 ~]# date +”%S”
+”48”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+=========================================================================================================================================================
+
+
+date +"%D" : Prints Date in MM/DD/YY
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# date +"%D"
+01/27/25
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+date +”%F” : Prints only the Full date as YYYY-MM-DD
+[root@ip-172-31-31-230 ~]# ^C
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# date +”%F”
+”2025-01-27”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+
+=========================================================================================================================================================
+
+
+date +”%A” : Prints the Day of the Week Saturday-Sunday
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# date +”%A” 
+”Monday”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+
+date +”%B” : Prints the month between January-December
+
+[root@ip-172-31-31-230 ~]# date +”%B”
+”January”
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#
+
+
+=========================================================================================================================================================
+
+                                 ****************************
+                                 *   HARDWARE COMMANDS      *
+                                 ****************************
+
+lscpu (or) cat /proc/cpuinfo : Displays information about the CPU architecture
+
+[root@ip-172-31-31-230 ~]# lscpu
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          46 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   1
+  On-line CPU(s) list:    0
+Vendor ID:                GenuineIntel
+  BIOS Vendor ID:         Intel
+  Model name:             Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+    CPU family:           6
+    Model:                79
+    Thread(s) per core:   1
+    Core(s) per socket:   1
+    Socket(s):            1
+    Stepping:             1
+    BogoMIPS:             4599.99
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rd
+                          tscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 
+                          x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single pti fsgsbas
+                          e bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+Virtualization features:  
+  Hypervisor vendor:      Xen
+  Virtualization type:    full
+Caches (sum of all):      
+  L1d:                    32 KiB (1 instance)
+  L1i:                    32 KiB (1 instance)
+  L2:                     256 KiB (1 instance)
+  L3:                     45 MiB (1 instance)
+NUMA:                     
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0
+Vulnerabilities:          
+  Gather data sampling:   Not affected
+  Itlb multihit:          KVM: Mitigation: VMX unsupported
+  L1tf:                   Mitigation; PTE Inversion
+  Mds:                    Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Meltdown:               Mitigation; PTI
+  Mmio stale data:        Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Reg file data sampling: Not affected
+  Retbleed:               Not affected
+  Spec rstack overflow:   Not affected
+  Spec store bypass:      Vulnerable
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:             Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+[root@ip-172-31-31-230 ~]# 
+
+
+============================================================================================================================================================
+
+lsblk -a : Lists the information about all the block devices attached to the system
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# lsblk -a
+NAME      MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+loop0       7:0    0   0B  0 loop 
+loop1       7:1    0   0B  0 loop 
+loop2       7:2    0   0B  0 loop 
+loop3       7:3    0   0B  0 loop 
+loop4       7:4    0   0B  0 loop 
+loop5       7:5    0   0B  0 loop 
+loop6       7:6    0   0B  0 loop 
+loop7       7:7    0   0B  0 loop 
+xvda      202:0    0   8G  0 disk 
+├─xvda1   202:1    0   8G  0 part /
+├─xvda127 259:0    0   1M  0 part 
+└─xvda128 259:1    0  10M  0 part /boot/efi
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+
+===========================================================================================================================================================
+
+free (or) cat /proc/meminfo: Displays system memory(RAM) details in KB
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# free
+               total        used        free      shared  buff/cache   available
+Mem:          972260      122568      617124         452      232568      708980
+Swap:              0           0           0
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# cat /proc/meminfo
+MemTotal:         972260 kB
+MemFree:          617124 kB
+MemAvailable:     708996 kB
+Buffers:            2168 kB
+Cached:           204936 kB
+SwapCached:            0 kB
+Active:           102716 kB
+Inactive:         153896 kB
+Active(anon):        316 kB
+Inactive(anon):    49644 kB
+Active(file):     102400 kB
+Inactive(file):   104252 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         49544 kB
+Mapped:            42628 kB
+Shmem:               452 kB
+KReclaimable:      25492 kB
+Slab:              57244 kB
+SReclaimable:      25492 kB
+SUnreclaim:        31752 kB
+KernelStack:        2044 kB
+PageTables:         2072 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      486128 kB
+Committed_AS:     229640 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       11904 kB
+VmallocChunk:          0 kB
+Percpu:             7360 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:       77824 kB
+DirectMap2M:      970752 kB
+[root@ip-172-31-31-230 ~]# 
+
+
+=========================================================================================================================================================
+
+free -m : Displays system memory(RAM) details in MB
+[root@ip-172-31-31-230 ~]# free -m
+               total        used        free      shared  buff/cache   available
+Mem:             949         119         602           0         227         692
+Swap:              0           0           0
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+df -h : Report file system disk space usage in human readable languages
+
+[root@ip-172-31-31-230 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           475M     0  475M   0% /dev/shm
+tmpfs           190M  448K  190M   1% /run
+/dev/xvda1      8.0G  1.6G  6.4G  20% /
+tmpfs           475M     0  475M   0% /tmp
+/dev/xvda128     10M  1.3M  8.7M  13% /boot/efi
+tmpfs            95M     0   95M   0% /run/user/1000
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]#[root@ip-172-31-31-230 ~]# df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs            4096       0      4096   0% /dev
+tmpfs             486128       0    486128   0% /dev/shm
+tmpfs             194452     448    194004   1% /run
+/dev/xvda1       8310764 1624124   6686640  20% /
+tmpfs             486132       0    486132   0% /tmp
+/dev/xvda128       10202    1310      8892  13% /boot/efi
+tmpfs              97224       0     97224   0% /run/user/1000
+[root@ip-172-31-31-230 ~]# [root@ip-172-31-31-230 ~]# df -kh
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           475M     0  475M   0% /dev/shm
+tmpfs           190M  448K  190M   1% /run
+/dev/xvda1      8.0G  1.6G  6.4G  20% /
+tmpfs           475M     0  475M   0% /tmp
+/dev/xvda128     10M  1.3M  8.7M  13% /boot/efi
+tmpfs            95M     0   95M   0% /run/user/1000
+[root@ip-172-31-31-230 ~]# 
+
+
+=========================================================================================================================================================
+                                 ****************************
+                                 *      FILES COMMANDS      *
+                                 ****************************
+
+
+touch filename : used to create a file
+
+[root@ip-172-31-31-230 ~]# touch filename
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+filename
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+touch aws azure gcp : used to create multiple files
+
+[root@ip-172-31-31-230 ~]# touch aws azure gcp
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+aws  azure  filename  gcp
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+touch Nagendra{1..5} : this command will create 5 files (Nagendra1,Nagendra2, Nagendra3 .... Nagendra5)
+[root@ip-172-31-31-230 ~]# touch linux{1..5}
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls -lerh
+ls: invalid option -- 'e'
+Try 'ls --help' for more information.
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls -lrth
+total 0
+-rw-r--r--. 1 root root 0 Jan 27 11:34 filename
+-rw-r--r--. 1 root root 0 Jan 27 11:34 gcp
+-rw-r--r--. 1 root root 0 Jan 27 11:34 azure
+-rw-r--r--. 1 root root 0 Jan 27 11:34 aws
+-rw-r--r--. 1 root root 0 Jan 27 11:35 Nagendra5
+-rw-r--r--. 1 root root 0 Jan 27 11:35 Nagendra4
+-rw-r--r--. 1 root root 0 Jan 27 11:35 Nagendra3
+-rw-r--r--. 1 root root 0 Jan 27 11:35 Nagendra2
+-rw-r--r--. 1 root root 0 Jan 27 11:35 Nagendra1
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+rm filename : remove file with permissions (rm means remove)
+
+[root@ip-172-31-31-230 ~]# rm filename
+rm: remove regular empty file 'filename'? yes
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+aws  azure  gcp  Nagendra1  Nagendra2  Nagendra3  Nagendra4  Nagendra5
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+rm -f filename : remove file without permissions (-f means forcefully)
+[root@ip-172-31-31-230 ~]# rm -f filename
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# rm -f Nagendra5
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+rm -f aws azure gpc : remove multiple files without permissions
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# rm -f aws azure gpc
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+gcp  Nagendra1  Nagendra2  Nagendra3  Nagendra4
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+rm -f Nagendra{1..5} : this command will remove Nagendra files from 1 to 5 without permissions
+
+[root@ip-172-31-31-230 ~]# rm -f Nagendra{1..5}
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+gcp
+[root@ip-172-31-31-23
+=========================================================================================================================================================
+
+rm -f * : used to delete all files
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# rm -f *
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+rm -f *.txt : used to delete all files with .txt extension
+[root@ip-172-31-31-230 ~]# touch nag.txt
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+nag.txt
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# rm -f *.txt
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+rm -f a* : this command will delete all files which are stared with “a” letter
+[root@ip-172-31-31-230 ~]# touch ashok
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+ashok
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# rm -f a*
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+                                 ****************************
+                                 * LIST THE FILES COMMANDS  *
+                                 ****************************
+
+ll : used to get list of files
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ll
+total 0
+-rw-r--r--. 1 root root 0 Jan 27 11:41 nag1
+-rw-r--r--. 1 root root 0 Jan 27 11:41 nag2
+-rw-r--r--. 1 root root 0 Jan 27 11:41 nag3
+-rw-r--r--. 1 root root 0 Jan 27 11:41 nag4
+-rw-r--r--. 1 root root 0 Jan 27 11:41 nag5
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+ls : used to get list of files
+[root@ip-172-31-31-230 ~]# touch nag{1..5}
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ls 
+nag1  nag2  nag3  nag4  nag5
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+*********************
+CHANGE DIRECTORY:
+*********************
+
+cd foldername : used to change directory
+[root@ip-172-31-31-230 ~]# cd nagendra
+[root@ip-172-31-31-230 nagendra]# 
+[root@ip-172-31-31-230 nagendra]# 
+
+=========================================================================================================================================================
+
+cd : used to go to root directory
+[root@ip-172-31-31-230 nagendra]# cd
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+=========================================================================================================================================================
+
+cd - : used to go to previous folder
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# cd -
+/root/nagendra
+[root@ip-172-31-31-230 nagendra]# 
+[root@ip-172-31-31-230 nagendra]# 
+[root@ip-172-31-31-230 nagendra]# 
+=========================================================================================================================================================
+
+cd ../ : used to go to one folder back
+
+[root@ip-172-31-31-230 Ashok]# 
+[root@ip-172-31-31-230 Ashok]# cd ../
+[root@ip-172-31-31-230 nagendra]# 
+[root@ip-172-31-31-230 nagendra]# 
+[root@ip-172-31-31-230 nagendra]# 
+=========================================================================================================================================================
+
+cd ../../ : used to go to 2 folders back
+
+[root@ip-172-31-31-230 Ashok]# 
+[root@ip-172-31-31-230 Ashok]# cd ../../
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+
+                                 ***********************
+                                 * DIRECTORY COMMANDS  *
+                                 ***********************
+
+
+mkdir folder1/folder2
+
+[root@ip-172-31-31-230 ~]# mkdir folder1 folder2
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ll
+total 0
+drwxr-xr-x. 2 root root  6 Jan 27 11:52 ashok
+drwxr-xr-x. 2 root root  6 Jan 27 11:55 folder1
+drwxr-xr-x. 2 root root  6 Jan 27 11:55 folder2
+-rw-r--r--. 1 root root  0 Jan 27 11:41 nag1
+-rw-r--r--. 1 root root  0 Jan 27 11:41 nag2
+-rw-r--r--. 1 root root  0 Jan 27 11:41 nag3
+-rw-r--r--. 1 root root  0 Jan 27 11:41 nag4
+-rw-r--r--. 1 root root  0 Jan 27 11:41 nag5
+drwxr-xr-x. 3 root root 19 Jan 27 11:53 nagendra
+[root@ip-172-31-31-230 ~]#
+
+=========================================================================================================================================================
+ll folder1 : used to get list of files & folder which are present in folder1
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# ll folder1 
+total 0
+[root@ip-172-31-31-230 ~]# 
+=========================================================================================================================================================
+touch folder1/aws.txt : used to create file inside a folder
+
+[root@ip-172-31-31-230 ~]# cd folder1
+[root@ip-172-31-31-230 folder1]# 
+[root@ip-172-31-31-230 folder1]# 
+[root@ip-172-31-31-230 folder1]# ls -lrth
+total 0
+-rw-r--r--. 1 root root 0 Jan 27 11:57 aws.txt
+[root@ip-172-31-31-230 folder1]# 
+[root@ip-172-31-31-230 folder1]# 
+=========================================================================================================================================================
+
+mkdir -p aws/azure/gcp/devops : used to create parenting folder (folder inside the folder) automatically
+
+[root@ip-172-31-31-230 folder1]# 
+[root@ip-172-31-31-230 folder1]# mkdir -p aws/azure/gcp/devops
+[root@ip-172-31-31-230 folder1]# 
+[root@ip-172-31-31-230 folder1]# ls -lrth
+total 0
+-rw-r--r--. 1 root root  0 Jan 27 11:57 aws.txt
+drwxr-xr-x. 3 root root 19 Jan 27 11:58 aws
+[root@ip-172-31-31-230 folder1]# 
+[root@ip-172-31-31-230 folder1]# cd aws
+[root@ip-172-31-31-230 aws]# 
+[root@ip-172-31-31-230 aws]# 
+[root@ip-172-31-31-230 aws]# ls -lrth
+total 0
+drwxr-xr-x. 3 root root 17 Jan 27 11:58 azure
+[root@ip-172-31-31-230 aws]# 
+[root@ip-172-31-31-230 aws]# 
+[root@ip-172-31-31-230 aws]# cd azure
+[root@ip-172-31-31-230 azure]# 
+[root@ip-172-31-31-230 azure]# 
+[root@ip-172-31-31-230 azure]# ll
+total 0
+drwxr-xr-x. 3 root root 20 Jan 27 11:58 gcp
+[root@ip-172-31-31-230 azure]# 
+[root@ip-172-31-31-230 azure]# 
+[root@ip-172-31-31-230 azure]# cd gcp
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# ls -lrth
+total 0
+drwxr-xr-x. 2 root root 6 Jan 27 11:58 devops
+[root@ip-172-31-31-230 gcp]# cd aws
+-bash: cd: aws: No such file or directory
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# cd devops
+[root@ip-172-31-31-230 devops]# 
+[root@ip-172-31-31-230 devops]# 
+
+=============================================================================================================================================
+
+                                 ******************
+                                 * COPY COMMANDS  *
+                                 ******************
+
+SYNTAX: cp source destination
+
+command: cp file1 file2
+
+By the above command, the data from file1 copies into file2. But the problem is it will overwrite the data which are present in file2.
+
+To overcome this issue we will use cat command.
+
+cat source_file (file1)>> destination_file (file2)
+
+===================================================================================================================================================
+
+                                 ******************
+                                 * MOVE COMMANDS  *
+                                 ******************
+
+SYNTAX: mv source destination
+
+COMMAND : mv file1 file2
+This is also called renaming a file
+
+ll : used to see the list of files in order (A-Z)
+
+ll -t : used to see the list of the files based on modification/creation time
+
+ll -r : used to see the files in reverse order (Z to A)
+
+ll -a : used to see all files including hidden
+
+==================================================================================================================================================
+
+                                 *****************
+                                 * CAT COMMANDS  *
+                                 *****************
+
+cat command is used to read the data from a file, it is also used to append the data in a file
+
+cat filename: used to read the data from a file
+
+cat>filename : used to overwrite the data
+
+cat>>filename: used to append the data
+
+NOTE: Cat command is used to append the data, but here the problem is, it is not possible to modify the data. To avoid this issue we can use editor in linux.
+
+[root@ip-172-31-31-230 gcp]# vi story
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# cat 
+^C
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# cat story
+There was once a hare who was friends with a tortoise. One day, he challenged the tortoise to a race. Seeing how slow the tortoise was going, the hare thought he’d win this easily. So, he took a nap while the tortoise kept on going. When the hare woke, he saw that the tortoise was already at the finish line. Much to his chagrin, the tortoise won the race while he was busy sleeping
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+
+
+
+==================================================================================================================================================
+
+                                 **************
+                                 * EDITORS    *
+                                 **************
+
+There are 2 types of editors in linux
+
+Vim editor
+
+Nano editor
+
+VIM EDITOR: It is used to edit the files in linux machines, It has 3 modes
+
+Command mode
+
+Insert mode
+
+Save & quit mode
+
+To open any file in vim editor : vim filename (or) vi filename
+
+1.COMMAND MODE: this is the default mode in vim editor, It is used to perform some actions like used to copy the data, delete the data and we can make undo and redo the changes as well.
+
+gg : used to go to 1st line of the file
+
+G : used to go to last line of the file
+
+M : used to go to middle of the file
+
+4gg : used to go to 4th line of the file
+
+17gg : used to go to 17th line of the file
+
+:23 : used to go to 23rd line of the file
+
+:set number : used to set numbers of the file
+
+yy : used to copy the line
+
+4yy : used to copy 4 lines from our cursor
+
+p : paste the copied content
+
+10p : paste the copied content 10 times
+
+dd : used to delete the line
+
+5dd : used to delete 5 lines from the cursor
+
+u : used to undo the changes
+
+crtl + r : used to redo the changes.
+
+/word : used to search for a word in a file
+
+?word : used to search for a word in a file
+
+:%s/old/new/ : used to replace
+
+==================================================================================================================================================
+2. INSERT MODE: This mode is used to insert the data or make any modifications in a file.
+
+To go to insert mode : i
+
+To go back to command mode : esc
+
+To go to the ending of the line : A
+
+To go to starting of this line : I
+
+To create a new line above the cursor : O
+
+To create a new line below the cursor : o
+
+DIFFERENCE B/W COMMAND MODE KEYS & INSERT MODE.
+
+If we perform command mode keys we will be in command mode only.
+
+If we perform insert mode keys we will go to insert mode.
+
+3. SAVE & QUIT MODE: This is used to save the data and quit from vim editor
+
+To save the data - :w
+
+To quit from vim editor - :q
+
+To quit forcefully - :q!
+
+To save & quit at a time - :wq
+
+To save & quit forcefully at a time - :wq!
+
+=======================================================================================================================================
+
+GREP (Global Regular Expression Print):
+It is used to search for a word in a file
+
+SYNTAX: grep “word” filename
+
+grep “word” filename : used to search for a word in a file
+
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# grep finish story
+There was once a hare who was friends with a tortoise. One day, he challenged the tortoise to a race. Seeing how slow the tortoise was going, the hare thought he’d win this easily. So, he took a nap while the tortoise kept on going. When the hare woke, he saw that the tortoise was already at the finish line. Much to his chagrin, the tortoise won the race while he was busy sleeping
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+
+=======================================================================================================================================
+
+grep -n “word” filename : it prints the data along with line numbers
+[root@ip-172-31-31-230 gcp]# grep -n finish story
+1:There was once a hare who was friends with a tortoise. One day, he challenged the tortoise to a race. Seeing how slow the tortoise was going, the hare thought he’d win this easily. So, he took a nap while the tortoise kept on going. When the hare woke, he saw that the tortoise was already at the finish line. Much to his chagrin, the tortoise won the race while he was busy sleeping
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+
+
+=======================================================================================================================================
+grep -c “word” filename : it prints no of occurances of a word
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# grep -c the story
+1
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-230 gcp]# grep -c tortoise story
+1
+[root@ip-172-31-31-230 gcp]# 
+
+=======================================================================================================================================
+
+grep -i “word” filename : used to search for a case-sensitive
+
+[root@ip-172-31-31-230 gcp]# grep -i tortoise story
+There was once a hare who was friends with a tortoise. One day, he challenged the tortoise to a race. Seeing how slow the tortoise was going, the hare thought he’d win this easily. So, he took a nap while the tortoise kept on going. When the hare woke, he saw that the tortoise was already at the finish line. Much to his chagrin, the tortoise won the race while he was busy sleeping
+[root@ip-172-31-31-230 gcp]# 
+[root@ip-172-31-31-
+
+
+=======================================================================================================================================
+
+                                  ****************
+                                  * USER COMMNDS *
+                                  ****************
+
+
+
+cat /etc/passwd (or) getent passwd: used to get list of users
+
+root@ip-172-31-31-230 ~]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/usr/sbin/nologin
+systemd-oom:x:999:999:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/usr/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:997:997:daemon account for libstoragemgmt:/:/usr/sbin/nologin
+systemd-coredump:x:996:996:systemd Core Dumper:/:/usr/sbin/nologin
+systemd-timesync:x:995:995:systemd Time Synchronization:/:/usr/sbin/nologin
+chrony:x:994:994:chrony system user:/var/lib/chrony:/sbin/nologin
+ec2-instance-connect:x:993:993::/home/ec2-instance-connect:/sbin/nologin
+stapunpriv:x:159:159:systemtap unprivileged user:/var/lib/stapunpriv:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+[root@ip-172-31-31-230 ~]# 
+
+=======================================================================================================================================
+
+useradd username : used to add user
+
+NOTE: whenever we added any user, then folder will gets created in /home directory
+
+whenever we added any user, then group will also created
+
+[root@ip-172-31-31-230 ~]# useradd ashok
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# getent passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/usr/sbin/nologin
+systemd-oom:x:999:999:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/usr/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:997:997:daemon account for libstoragemgmt:/:/usr/sbin/nologin
+systemd-coredump:x:996:996:systemd Core Dumper:/:/usr/sbin/nologin
+systemd-timesync:x:995:995:systemd Time Synchronization:/:/usr/sbin/nologin
+chrony:x:994:994:chrony system user:/var/lib/chrony:/sbin/nologin
+ec2-instance-connect:x:993:993::/home/ec2-instance-connect:/sbin/nologin
+stapunpriv:x:159:159:systemtap unprivileged user:/var/lib/stapunpriv:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+ashok:x:1001:1001::/home/ashok:/bin/bash
+[root@ip-172-31-31-230 ~]# 
+
+===============================================================================================================
+userdel username : used to delete user
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# userdel ashok
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+NOTE: whenever we delete any user, then folder will not gets deleted in /home directory
+
+whenever we delete any user, then group will gets deleted
+
+userdel -r username : used to remove the user along with folder
+
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# userdel -r ashok
+userdel: user 'ashok' does not exist
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+===============================================================================================================
+useradd -M username : used to create a user without folder
+
+[root@ip-172-31-31-230 ~]# useradd -M username
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+
+===================================================================================================================
+su - username : used to switch to another user
+
+[root@ip-172-31-31-230 ~]# su - username
+su: warning: cannot change directory to /home/username: No such file or directory
+[username@Nagendra root]$
+
+passwd username : used to set a password to user
+[username@Nagendra root]$ 
+[username@Nagendra root]$ passwd username
+passwd: Only root can specify a user name.
+[username@Nagendra root]$ 
+[username@Nagendra root]$ exit
+[root@ip-172-31-31-230 ~]# passwd username
+Changing password for user username.
+New password: 
+BAD PASSWORD: The password fails the dictionary check - it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+[root@ip-172-31-31-230 ~]# 
+====================================================================================================================
+
+                                  ******************
+                                  * GROUP COMMANDS *
+                                  ******************
+
+
+
+
+
